@@ -20,8 +20,8 @@ public class TileAnimationHandler : MonoBehaviour {
       yield return null;
     }
 
-    _transform.localScale = new Vector3(0.25f, 0.25f, 1f);
-    while (_transform.localScale.x < 1f) {
+    _transform.localScale = new Vector3(0.2f, 0.2f, 1f);
+    while (_transform.localScale.x < 0.2f) {
       _transform.localScale = Vector3.MoveTowards(_transform.localScale, Vector3.one, scaleSpeed * Time.deltaTime);
       yield return null;
     }
