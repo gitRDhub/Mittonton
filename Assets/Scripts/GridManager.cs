@@ -25,6 +25,7 @@ public class GridManager : MonoBehaviour {
   public GameObject gameOverPanel;
   public GameObject noTile;
   public Text scoreText;
+  public Text GOscoreText;
   public GameObject[] tilePrefabs;
   public LayerMask backgroundLayer;
 	public float minSwipeDistance = 10.0f;
@@ -47,7 +48,9 @@ public class GridManager : MonoBehaviour {
   void Update() {
     if (state == State.GameOver) {
       gameOverPanel.SetActive(true);
-    } else if (state == State.Loaded) {
+      GOscoreText.text = points.ToString();
+        }
+        else if (state == State.Loaded) {
       state = State.WaitingForInput;
       GenerateRandomTile();
       GenerateRandomTile();
