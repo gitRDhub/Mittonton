@@ -444,9 +444,10 @@ public class GridManager : MonoBehaviour {
 
     public void hindersamon()
     {
-
-            // attempt to get the starting position
-            int x = Random.Range(0, cols);
+        if (tiles.Count < rows * cols)
+            {
+                // attempt to get the starting position
+                int x = Random.Range(0, cols);
             int y = Random.Range(0, rows);
 
             // starting from the random starting position, loop through
@@ -459,9 +460,9 @@ public class GridManager : MonoBehaviour {
                     found = true;
                     Vector2 worldPosition = GridToWorldPoint(x, y);
                     GameObject obj;
-           
-                    
-                        obj = SimplePool.Spawn(tilePrefabs[11], worldPosition, transform.rotation);
+
+
+                    obj = SimplePool.Spawn(tilePrefabs[11], worldPosition, transform.rotation);
 
                     tiles.Add(obj);
                     TileAnimationHandler tileAnimManager = obj.GetComponent<TileAnimationHandler>();
@@ -480,6 +481,11 @@ public class GridManager : MonoBehaviour {
                     y = 0;
                 }
             }
+        }
+        else
+        {
+            state = State.GameOver;
+        }
     }
     #endregion
 
