@@ -29,6 +29,7 @@ public class GridManager : MonoBehaviour {
     public GameObject[] tilePrefabs;
     public LayerMask backgroundLayer;
     public float minSwipeDistance = 10.0f;
+    public GameObject hinder;
 
     private enum State {
         Loaded,
@@ -60,7 +61,7 @@ public class GridManager : MonoBehaviour {
                 if (MoveTilesLeft()) {
                     state = State.CheckingMatches;
                 }
-            } else if (Input.GetButtonDown("Right")) {
+            }else if (Input.GetButtonDown("Right")) {
                 if (MoveTilesRight()) {
                     state = State.CheckingMatches;
                 }

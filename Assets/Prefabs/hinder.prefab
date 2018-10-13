@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4919854674460940}
   - component: {fileID: 212482766068623604}
   - component: {fileID: 61259068609284492}
-  - component: {fileID: 114949726599127662}
   - component: {fileID: 114661071745802364}
+  - component: {fileID: 114758036003847884}
   m_Layer: 0
   m_Name: hinder
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleSpeed: 0
   growSize: 0
---- !u!114 &114949726599127662
+--- !u!114 &114758036003847884
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

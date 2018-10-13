@@ -3494,7 +3494,7 @@ MonoBehaviour:
   backgroundLayer:
     serializedVersion: 2
     m_Bits: 288
-  minSwipeDistance: 10
+  minSwipeDistance: 11
 --- !u!1001 &1325254301
 Prefab:
   m_ObjectHideFlags: 0
