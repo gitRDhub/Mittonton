@@ -28,7 +28,8 @@ public class GridManager : MonoBehaviour {
   public Text GOscoreText;
   public GameObject[] tilePrefabs;
   public LayerMask backgroundLayer;
-	public float minSwipeDistance = 10.0f;
+  public GameObject hinderBlock;
+  public float minSwipeDistance = 10.0f;
 
   private enum State {
     Loaded, 
@@ -441,5 +442,37 @@ public class GridManager : MonoBehaviour {
     TileAnimationHandler tileAnim = newTile.GetComponent<TileAnimationHandler>();
     tileAnim.AnimateUpgrade();
   }
+
+    public void hindersamon()
+    {
+        bool found = false;
+        int x = Random.Range(0, cols);
+        int y = Random.Range(0, rows);
+
+        while (!found)
+        {
+            if (GetObjectAtGridPosition(x, y) == noTile)
+            {
+                found = true;
+                Vector2 worldPosition = GridToWorldPoint(x, y);
+                GameObject obj;
+                
+                    obj = SimplePool.Spawn(tilePrefabs[3], worldPosition, transform.rotation);
+
+            }
+
+            x++;
+            if (x >= cols)
+            {
+                y++;
+                x = 0;
+            }
+
+            if (y >= rows)
+            {
+                y = 0;
+            }
+        }
+    }
   #endregion
 }

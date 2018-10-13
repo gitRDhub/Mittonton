@@ -1,8 +1,17 @@
 fileFormatVersion: 2
 guid: 57586050a64bb3d4aa56fe142019f47f
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - gameOverPanel: {instanceID: 0}
+  - noTile: {instanceID: 0}
+  - scoreText: {instanceID: 0}
+  - GOscoreText: {instanceID: 0}
+  - hinderBlock: {fileID: 1934275368324734, guid: 2ff1f8b109eb70d4ab45028cd2fb094d,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
